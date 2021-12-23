@@ -10,18 +10,19 @@ public class Programa {
 	
         Scanner sc = new Scanner(System.in);
         
-        PrintService ps =new PrintService();
+        PrintService<String> ps =new PrintService<>();
 
 	System.out.print("How many values? ");
 	int n = sc.nextInt();
-	
+			
 	for (int i = 0; i < n; i++) {
-		int value = sc.nextInt();
+		String value = sc.next();
 		ps.addValue(value);		
 	}
 	
 	ps.print();
-	System.out.println("First: " + ps.first());
+	String x =  ps.first();
+	System.out.println("First: " + x);
 	
 	sc.close();
 	}			
